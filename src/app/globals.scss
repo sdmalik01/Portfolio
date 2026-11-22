@@ -33,8 +33,8 @@ img { object-fit: cover; }
 .hud-frame__label { position: absolute; z-index: 2; display: grid; place-items: center; height: 24px; min-width: 210px; padding: 0 20px; background: #020204; color: #f5f2ed; font: 700 9px/1 var(--mono); letter-spacing: .16em; white-space: nowrap; clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 100%, 0 100%); }
 .hud-frame__label--top { top: 0; left: 50%; transform: translateX(-50%); clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 18px 100%); }
 .hud-frame__label--bottom { bottom: 0; left: 50%; transform: translateX(-50%); clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 100%, 0 100%); }
-.hud-frame__label--left { left: 0; top: 50%; transform: translate(-50%, -50%) rotate(-90deg); }
-.hud-frame__label--right { right: 0; top: 50%; transform: translate(50%, -50%) rotate(90deg); }
+.hud-frame__label--left { left: 0; top: 50%; transform: translate(-50%, -50%) rotate(-90deg); clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 100%, 0 100%); }
+.hud-frame__label--right { right: 0; top: 50%; transform: translate(50%, -50%) rotate(90deg); clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 18px 100%); }
 .scroll-trace { position: fixed; z-index: 47; right: 32px; top: 94px; bottom: 34px; width: 1px; background: rgba(255,255,255,.055); pointer-events: none; }
 .scroll-trace span { position: absolute; top: 0; left: 0; width: 1px; height: var(--scroll-progress); max-height: 100%; background: linear-gradient(180deg, #ff9a62, #f09ad3 58%, #80bfff); box-shadow: 0 0 10px rgba(240,154,211,.85), 0 0 22px rgba(128,191,255,.38); transition: height .08s linear; }
 .scroll-trace span:after { content: ""; position: absolute; left: -2px; bottom: -3px; width: 5px; height: 5px; border-radius: 50%; background: #fff3eb; box-shadow: 0 0 12px #ff9a62, 0 0 24px #f09ad3; }
