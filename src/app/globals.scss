@@ -19,7 +19,7 @@ img { object-fit: cover; }
 
 .site-shell { position: relative; min-height: 100vh; background: #070810; }
 .site-atmosphere { position: fixed; z-index: 0; inset: 0; pointer-events: none; opacity: .7; background: radial-gradient(ellipse at 12% 18%, rgba(255, 218, 237, .12), transparent 24%), radial-gradient(ellipse at 84% 28%, rgba(184, 176, 238, .12), transparent 27%), radial-gradient(ellipse at 48% 64%, rgba(247, 171, 209, .09), transparent 32%), radial-gradient(ellipse at 22% 93%, rgba(255, 218, 226, .11), transparent 26%); filter: blur(25px); }
-.site-shell > *:not(.site-atmosphere):not(.hud-frame):not(.scroll-trace) { position: relative; z-index: 1; }
+.site-shell > *:not(.site-atmosphere):not(.hud-frame):not(.scroll-trace):not(.loader) { position: relative; z-index: 1; }
 .site-shell:before { content: ""; position: fixed; z-index: 45; inset: 18px; border: 1px solid rgba(163, 181, 232, 0.1); pointer-events: none; }
 .hud-frame { position: fixed; z-index: 46; inset: 18px; pointer-events: none; }
 .hud-frame__corner { position: absolute; width: 18px; height: 18px; border-color: rgba(255, 247, 241, .92); border-style: solid; }
@@ -61,6 +61,7 @@ img { object-fit: cover; }
 .hero:before { content: ""; position: absolute; z-index: 2; inset: 76px 3.5vw 28px; border-left: 1px solid rgba(163,181,232,.13); border-right: 1px solid rgba(163,181,232,.13); pointer-events: none; }
 .hero__stars { position: absolute; inset: 0; opacity: .5; background-image: radial-gradient(circle at 10% 20%, #fff 0 1px, transparent 1.5px), radial-gradient(circle at 70% 12%, #fff 0 1px, transparent 1.5px), radial-gradient(circle at 88% 60%, #9cbff3 0 1px, transparent 1.5px), radial-gradient(circle at 34% 76%, #fff 0 1px, transparent 1.5px); background-size: 230px 230px, 310px 310px, 270px 270px, 350px 350px; }
 .hero__clouds { position: absolute; z-index: 1; inset: 11% 0 0; opacity: .85; background: radial-gradient(ellipse at 18% 68%, rgba(255, 231, 236, .84) 0 5%, transparent 25%), radial-gradient(ellipse at 45% 60%, rgba(244, 179, 214, .5) 0 8%, transparent 30%), radial-gradient(ellipse at 79% 76%, rgba(248, 219, 229, .7) 0 6%, transparent 24%), radial-gradient(ellipse at 63% 30%, rgba(152, 135, 205, .28) 0 7%, transparent 28%), radial-gradient(ellipse at 46% 86%, rgba(255, 164, 186, .38) 0 5%, transparent 32%); filter: blur(28px); transform: scale(1.18); animation: cloud-drift 18s ease-in-out infinite alternate; }
+.hero__clouds3d { position: absolute; z-index: 2; inset: 8% 0 0; opacity: .65; pointer-events: none; }
 @keyframes cloud-drift { from { transform: scale(1.18) translate3d(-1.5%, 0, 0); } to { transform: scale(1.22) translate3d(1.5%, -2%, 0); } }
 .hero__three { position: absolute; z-index: 4; width: 44%; height: 78%; left: 28%; bottom: 1%; opacity: 1; filter: drop-shadow(0 28px 55px rgba(236,136,151,.16)); }
 .hero__content { position: absolute; z-index: 5; inset: 0; pointer-events: none; }

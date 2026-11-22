@@ -166,6 +166,7 @@ export default function Portfolio() {
         <section className="hero" id="top">
           <div className="hero__stars" />
           <div className="hero__clouds" />
+          <div className="hero__clouds3d"><CloudScene /></div>
           <div className="hero__three"><ThreeHero /></div>
           <div className="hero__content">
             <p className="eyebrow"><span /> ENGINEERING THE UNEXPECTED · INDIA</p>
@@ -182,15 +183,6 @@ export default function Portfolio() {
             <b>ACTIVE</b><span>OBSERVATION</span><span>SYSTEMS ONLINE</span>
           </div>
           <a className="hero__discover" href="#about"><span>↓</span> DISCOVER THE ARCHIVE</a>
-        </section>
-
-        <section className="cloud-bridge" aria-label="Atmospheric transition">
-          <div className="cloud-bridge__scene"><CloudScene /></div>
-          <div className="cloud-bridge__copy">
-            <p className="eyebrow">CHAPTER 01 / ENTER THE ATMOSPHERE</p>
-            <h2>BEYOND<br /><i>THE KNOWN.</i></h2>
-            <span>SCROLL TO DESCEND INTO THE ARCHIVE ↓</span>
-          </div>
         </section>
 
         <section className="identity" id="about">

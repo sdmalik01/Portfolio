@@ -16,10 +16,10 @@ function CloudField() {
 
   return (
     <group ref={group} position={[0, 0, -1]}>
-      <Cloud position={[-2.8, 0.1, 0]} color="#fff4fa" opacity={0.78} speed={0.12} width={7} depth={2.2} segments={20} />
-      <Cloud position={[2.5, 0.35, -0.5]} color="#f4c8e8" opacity={0.7} speed={0.1} width={7.5} depth={2.4} segments={22} />
-      <Cloud position={[0, -0.8, 0.7]} color="#ffdce8" opacity={0.55} speed={0.08} width={8} depth={2.1} segments={18} />
-      <Cloud position={[0.2, 1.05, -1.5]} color="#c7c8ef" opacity={0.34} speed={0.08} width={5.5} depth={2} segments={16} />
+      <Cloud position={[-2.8, 0.1, 0]} scale={[2.4, 1, 1]} color="#fff4fa" opacity={0.78} speed={0.12} segments={20} />
+      <Cloud position={[2.5, 0.35, -0.5]} scale={[2.55, 1, 1]} color="#f4c8e8" opacity={0.7} speed={0.1} segments={22} />
+      <Cloud position={[0, -0.8, 0.7]} scale={[2.7, 1, 1]} color="#ffdce8" opacity={0.55} speed={0.08} segments={18} />
+      <Cloud position={[0.2, 1.05, -1.5]} scale={[1.9, 1, 1]} color="#c7c8ef" opacity={0.34} speed={0.08} segments={16} />
       <mesh position={[0, 0.05, 0.7]}>
         <sphereGeometry args={[0.48, 32, 32]} />
         <meshBasicMaterial color="#fff1d2" transparent opacity={0.82} />
