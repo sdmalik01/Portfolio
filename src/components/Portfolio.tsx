@@ -103,10 +103,26 @@ export default function Portfolio() {
     };
   }, [loaderDone]);
 
+  useEffect(() => {
+    const updateProgress = () => {
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = height > 0 ? window.scrollY / height : 0;
+      document.documentElement.style.setProperty("--scroll-progress", `${progress * 100}%`);
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  }, []);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <div ref={root} className="site-shell">
+      <div className="scroll-trace" aria-hidden="true"><span /></div>
       <AnimatePresence>
         {!loaderDone && (
           <motion.div className="loader" exit={{ opacity: 0 }} transition={{ duration: 0.55 }}>
