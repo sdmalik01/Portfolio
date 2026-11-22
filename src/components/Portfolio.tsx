@@ -123,6 +123,14 @@ export default function Portfolio() {
   return (
     <div ref={root} className="site-shell">
       <div className="scroll-trace" aria-hidden="true"><span /></div>
+      <div className="hud-frame" aria-hidden="true">
+        <i className="hud-frame__corner hud-frame__corner--tl" />
+        <i className="hud-frame__corner hud-frame__corner--tr" />
+        <i className="hud-frame__corner hud-frame__corner--bl" />
+        <i className="hud-frame__corner hud-frame__corner--br" />
+        <i className="hud-frame__line hud-frame__line--top" />
+        <i className="hud-frame__line hud-frame__line--bottom" />
+      </div>
       <AnimatePresence>
         {!loaderDone && (
           <motion.div className="loader" exit={{ opacity: 0 }} transition={{ duration: 0.55 }}>
@@ -155,6 +163,7 @@ export default function Portfolio() {
       <main>
         <section className="hero" id="top">
           <div className="hero__stars" />
+          <div className="hero__clouds" />
           <div className="hero__three"><ThreeHero /></div>
           <div className="hero__content">
             <p className="eyebrow"><span /> ENGINEERING THE UNEXPECTED · INDIA</p>

@@ -20,20 +20,22 @@ function Core() {
           <sphereGeometry args={[0.86, 48, 48]} />
           <meshStandardMaterial color="#c86f55" roughness={0.32} metalness={0.58} />
         </mesh>
-        <mesh position={[0, 0.82, 0.76]} scale={[0.76, 0.52, 0.16]}>
+        <mesh position={[0, 0.83, 0.8]} scale={[0.72, 0.48, 0.12]}>
           <sphereGeometry args={[0.86, 32, 32]} />
-          <meshStandardMaterial color="#171a25" roughness={0.12} metalness={0.92} />
+          <meshStandardMaterial color="#131521" roughness={0.12} metalness={0.92} emissive="#252947" emissiveIntensity={0.22} />
         </mesh>
-        <mesh position={[0, 1.28, -0.1]} scale={[1.1, 0.12, 0.8]} rotation={[0.1, 0, 0]}>
-          <torusGeometry args={[0.72, 0.055, 12, 64]} />
-          <meshStandardMaterial color="#ffa273" roughness={0.22} metalness={0.75} emissive="#ff6f48" emissiveIntensity={0.3} />
+        <mesh position={[0, 0.85, 0]} rotation={[0, 0, 0]}>
+          <torusGeometry args={[1.22, 0.08, 12, 96]} />
+          <meshStandardMaterial color="#e9936e" roughness={0.28} metalness={0.7} emissive="#ff674d" emissiveIntensity={0.22} />
         </mesh>
-        {[-0.58, 0.58].map((x) => (
-          <mesh key={x} position={[x, 0.95, 0.86]} scale={[0.1, 0.035, 0.02]}>
-            <sphereGeometry args={[1, 20, 20]} />
-            <meshBasicMaterial color="#ffe0bb" />
-          </mesh>
-        ))}
+        <mesh position={[0, 0.85, 0.02]} rotation={[0, Math.PI / 2, 0]}>
+          <torusGeometry args={[1.15, 0.035, 10, 96]} />
+          <meshBasicMaterial color="#ffd2b5" transparent opacity={0.7} />
+        </mesh>
+        <mesh position={[0, 0.86, 0.15]} scale={[0.18, 0.18, 0.18]}>
+          <icosahedronGeometry args={[1, 2]} />
+          <meshStandardMaterial color="#f7cf8e" roughness={0.2} metalness={0.4} emissive="#ffa45f" emissiveIntensity={0.75} />
+        </mesh>
         <mesh position={[0, -0.58, 0]} scale={[1.18, 1.05, 0.72]}>
           <capsuleGeometry args={[0.72, 1.32, 8, 24]} />
           <meshStandardMaterial color="#a95d48" roughness={0.38} metalness={0.62} />
