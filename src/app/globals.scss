@@ -21,7 +21,7 @@ img { object-fit: cover; }
 .site-atmosphere { position: fixed; z-index: 0; inset: 0; pointer-events: none; opacity: .92; background: radial-gradient(ellipse at 12% 18%, rgba(255, 218, 237, .25), transparent 24%), radial-gradient(ellipse at 84% 28%, rgba(184, 176, 238, .25), transparent 27%), radial-gradient(ellipse at 48% 64%, rgba(247, 171, 209, .2), transparent 32%), radial-gradient(ellipse at 22% 93%, rgba(255, 218, 226, .2), transparent 26%); filter: blur(25px); }
 .site-shell > *:not(.site-atmosphere):not(.hud-frame):not(.scroll-trace):not(.loader) { position: relative; z-index: 1; }
 .site-shell:before { content: ""; position: fixed; z-index: 45; inset: 18px; border: 1px solid rgba(0, 0, 0, .55); pointer-events: none; }
-.hud-frame { position: fixed; z-index: 46; inset: 0; pointer-events: none; border: 18px solid #020204; box-sizing: border-box; background: transparent; }
+.hud-frame { position: fixed; z-index: 46; inset: 0; pointer-events: none; border: 9px solid #020204; box-sizing: border-box; background: transparent; }
 .hud-frame__corner { position: absolute; width: 18px; height: 18px; border-color: #000; border-style: solid; }
 .hud-frame__corner--tl { top: 0; left: 0; border-width: 5px 0 0 5px; }
 .hud-frame__corner--tr { top: 0; right: 0; border-width: 5px 5px 0 0; }
@@ -30,6 +30,11 @@ img { object-fit: cover; }
 .hud-frame__line { position: absolute; left: 16%; width: 68%; height: 1px; background: rgba(0, 0, 0, .72); }
 .hud-frame__line--top { top: 68px; }
 .hud-frame__line--bottom { bottom: 68px; }
+.hud-frame__label { position: absolute; z-index: 2; display: grid; place-items: center; height: 24px; padding: 0 20px; background: #020204; color: #f5f2ed; font: 700 9px/1 var(--mono); letter-spacing: .16em; white-space: nowrap; }
+.hud-frame__label--top { top: 0; left: 50%; transform: translateX(-50%); }
+.hud-frame__label--bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+.hud-frame__label--left { left: 0; top: 50%; transform: translate(-50%, -50%) rotate(-90deg); }
+.hud-frame__label--right { right: 0; top: 50%; transform: translate(50%, -50%) rotate(90deg); }
 .scroll-trace { position: fixed; z-index: 47; right: 32px; top: 94px; bottom: 34px; width: 1px; background: rgba(255,255,255,.055); pointer-events: none; }
 .scroll-trace span { position: absolute; top: 0; left: 0; width: 1px; height: var(--scroll-progress); max-height: 100%; background: linear-gradient(180deg, #ff9a62, #f09ad3 58%, #80bfff); box-shadow: 0 0 10px rgba(240,154,211,.85), 0 0 22px rgba(128,191,255,.38); transition: height .08s linear; }
 .scroll-trace span:after { content: ""; position: absolute; left: -2px; bottom: -3px; width: 5px; height: 5px; border-radius: 50%; background: #fff3eb; box-shadow: 0 0 12px #ff9a62, 0 0 24px #f09ad3; }
@@ -192,7 +197,8 @@ footer span { color: var(--muted); font: 9px var(--mono); letter-spacing: .12em;
 
 @media (max-width: 720px) {
   .site-shell:before { inset: 10px; }
-  .hud-frame { inset: 0; border-width: 10px; }
+  .hud-frame { inset: 0; border-width: 5px; }
+  .hud-frame__label { height: 18px; padding: 0 10px; font-size: 7px; }
   .hud-frame__line--top { top: 54px; }
   .hud-frame__line--bottom { bottom: 54px; }
   .scroll-trace { right: 16px; top: 78px; bottom: 22px; }

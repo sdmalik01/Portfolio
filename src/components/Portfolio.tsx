@@ -132,6 +132,10 @@ export default function Portfolio() {
         <i className="hud-frame__corner hud-frame__corner--br" />
         <i className="hud-frame__line hud-frame__line--top" />
         <i className="hud-frame__line hud-frame__line--bottom" />
+        <b className="hud-frame__label hud-frame__label--top">CAPTAIN SYNDROME</b>
+        <b className="hud-frame__label hud-frame__label--right">CAPTAIN SYNDROME</b>
+        <b className="hud-frame__label hud-frame__label--bottom">CAPTAIN SYNDROME</b>
+        <b className="hud-frame__label hud-frame__label--left">CAPTAIN SYNDROME</b>
       </div>
       <AnimatePresence>
         {!loaderDone && (
