@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 
 const ThreeHero = dynamic(() => import("./ThreeHero"), { ssr: false });
+const CloudScene = dynamic(() => import("./CloudScene"), { ssr: false });
 
 const image = (name: string) => `/images/${encodeURIComponent(name)}`;
 
@@ -122,6 +123,7 @@ export default function Portfolio() {
 
   return (
     <div ref={root} className="site-shell">
+      <div className="site-atmosphere" aria-hidden="true" />
       <div className="scroll-trace" aria-hidden="true"><span /></div>
       <div className="hud-frame" aria-hidden="true">
         <i className="hud-frame__corner hud-frame__corner--tl" />
@@ -180,6 +182,15 @@ export default function Portfolio() {
             <b>ACTIVE</b><span>OBSERVATION</span><span>SYSTEMS ONLINE</span>
           </div>
           <a className="hero__discover" href="#about"><span>↓</span> DISCOVER THE ARCHIVE</a>
+        </section>
+
+        <section className="cloud-bridge" aria-label="Atmospheric transition">
+          <div className="cloud-bridge__scene"><CloudScene /></div>
+          <div className="cloud-bridge__copy">
+            <p className="eyebrow">CHAPTER 01 / ENTER THE ATMOSPHERE</p>
+            <h2>BEYOND<br /><i>THE KNOWN.</i></h2>
+            <span>SCROLL TO DESCEND INTO THE ARCHIVE ↓</span>
+          </div>
         </section>
 
         <section className="identity" id="about">
