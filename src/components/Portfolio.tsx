@@ -8,8 +8,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 
-const ThreeHero = dynamic(() => import("./ThreeHero"), { ssr: false });
 const CloudScene = dynamic(() => import("./CloudScene"), { ssr: false });
+const PixelPortrait = dynamic(() => import("./PixelPortrait"), { ssr: false });
 
 const image = (name: string) => `/images/${encodeURIComponent(name)}`;
 
@@ -171,7 +171,7 @@ export default function Portfolio() {
           <div className="hero__stars" />
           <div className="hero__clouds" />
           <div className="hero__clouds3d"><CloudScene /></div>
-          <div className="hero__three"><ThreeHero /></div>
+          <div className="hero__three"><PixelPortrait /></div>
           <div className="hero__content">
             <p className="eyebrow"><span /> ENGINEERING THE UNEXPECTED · INDIA</p>
             <h1><span>SAYYAD</span><strong>MALIK</strong></h1>
